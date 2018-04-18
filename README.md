@@ -1,5 +1,7 @@
 # banny310/rpm-builder
 
-## What is inside
+## Description
+
+Full environment for building php apps with FPM
 
 FPM + PHP7.1 + Composer
