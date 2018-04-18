@@ -1,4 +1,4 @@
-# banny310/rpm-builder:php7.1
+# banny310/rpm-builder
 
 ## What is inside
 
