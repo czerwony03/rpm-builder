@@ -9,7 +9,7 @@ ENV LC_ALL="C.UTF-8"
 
 # Install tools
 RUN apt-get -y update
-RUN apt-get install -y --no-install-recommends apt-utils apt-transport-https lsb-release ca-certificates wget ssh
+RUN apt-get install -y --no-install-recommends apt-utils apt-transport-https lsb-release ca-certificates wget ssh git
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
     && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list \
     && apt-get -y update
