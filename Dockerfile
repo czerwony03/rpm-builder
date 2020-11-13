@@ -3,7 +3,7 @@ MAINTAINER Szymon Banaś <szymon.banas@inonecar.com>
 
 # Environment
 ENV TZ="Europe/Warsaw"
-ENV PHP_VERSION="php7.2"
+ENV PHP_VERSION="php7.4"
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV LC_ALL="C.UTF-8"
 
