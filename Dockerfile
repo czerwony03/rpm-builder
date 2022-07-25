@@ -1,5 +1,5 @@
 FROM tenzer/fpm:no-entrypoint
-MAINTAINER Szymon Banaś <szymon.banas@inonecar.com>
+MAINTAINER Szymon Banaś <szymon.banas@impetbhp.pl>
 
 # Environment
 ENV TZ="Europe/Warsaw"
