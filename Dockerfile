@@ -19,10 +19,10 @@ RUN apt-get install -y ${PHP_VERSION} ${PHP_VERSION}-dev ${PHP_VERSION}-bcmath $
     ${PHP_VERSION}-cli ${PHP_VERSION}-curl ${PHP_VERSION}-intl ${PHP_VERSION}-json ${PHP_VERSION}-mbstring \
     ${PHP_VERSION}-opcache ${PHP_VERSION}-soap ${PHP_VERSION}-sqlite3 ${PHP_VERSION}-xml ${PHP_VERSION}-xsl \
     ${PHP_VERSION}-zip ${PHP_VERSION}-mysql ${PHP_VERSION}-pgsql ${PHP_VERSION}-zip \
-    php-amqp php-redis
+    ${PHP_VERSION}-amqp ${PHP_VERSION}-redis
 
 # Upgrade all
-RUN apt-get -y upgrade
+#RUN apt-get -y upgrade
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
