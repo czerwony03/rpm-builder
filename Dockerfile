@@ -1,9 +1,9 @@
 FROM tenzer/fpm:no-entrypoint
-MAINTAINER Szymon Banaś <szymon.banas@impetbhp.pl>
+MAINTAINER Mariusz Wroński <mwronski@trans.eu>
 
 # Environment
 ENV TZ="Europe/Warsaw"
-ENV PHP_VERSION="php7.4"
+ENV PHP_VERSION="php8.0"
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV LC_ALL="C.UTF-8"
 
@@ -16,10 +16,12 @@ RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 
 # Install PIP, PHP, and supplimentary programs.
 RUN apt-get install -y ${PHP_VERSION} ${PHP_VERSION}-dev ${PHP_VERSION}-bcmath ${PHP_VERSION}-bz2 \
-    ${PHP_VERSION}-cli ${PHP_VERSION}-curl ${PHP_VERSION}-intl ${PHP_VERSION}-json ${PHP_VERSION}-mbstring \
+    ${PHP_VERSION}-cli ${PHP_VERSION}-curl ${PHP_VERSION}-intl ${PHP_VERSION}-mbstring \
     ${PHP_VERSION}-opcache ${PHP_VERSION}-soap ${PHP_VERSION}-sqlite3 ${PHP_VERSION}-xml ${PHP_VERSION}-xsl \
     ${PHP_VERSION}-zip ${PHP_VERSION}-mysql ${PHP_VERSION}-pgsql ${PHP_VERSION}-zip \
     ${PHP_VERSION}-amqp ${PHP_VERSION}-redis
+
+RUN rm /usr/bin/php && ln /usr/bin/php8.0 /usr/bin/php
 
 # Upgrade all
 #RUN apt-get -y upgrade

@@ -4,4 +4,4 @@
 
 Full environment for building php apps with FPM
 
-FPM + PHP7.1 + Composer
+FPM + PHP8.0 + Composer
